@@ -29,6 +29,17 @@ jobs:
     - name: Build and Test with Maven
       run: cd ./complete && mvn -B test --file pom.xml --log-file log.txt
 
+    - name: Upload File to Slack
+      uses: slackapi/slack-github-action@v3.0.2
+      with:
+        method: files.uploadV2
+        token: ${{ secrets.SLACK_BOT_TOKEN }}
+        payload: |
+          channel_id: 'C0B1EP1JCLE'
+          initial_comment: "Tests finished, sending report..."
+          file: "./log.txt"
+          filename: "log.txt"
+
     - name: Log in to Docker Hub
       uses: docker/login-action@v3
       with:
