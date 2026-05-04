@@ -27,7 +27,7 @@ jobs:
         cache: maven
 
     - name: Build and Test with Maven
-      run: cd ./complete && mvn -B test --file pom.xml --log-file log.txt
+      run: cd ./complete && mvn -B test --file pom.xml --log-file log.txt && ls -al
 
     - name: Upload File to Slack
       uses: slackapi/slack-github-action@v3.0.2
