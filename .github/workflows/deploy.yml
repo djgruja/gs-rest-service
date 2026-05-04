@@ -15,7 +15,7 @@ jobs:
     - name: Post to Slack
       uses: slackapi/slack-github-action@v1.26.0
       with:
-        channel-id: 'C0B1EP1JCLE'
+        channel-id: 'C0B13MRKM7H'
         slack-message: "\n Deploy pipeline started \n <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|Click here> \n"
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
@@ -35,7 +35,7 @@ jobs:
     - name: Post to Slack
       uses: slackapi/slack-github-action@v1.26.0
       with:
-        channel-id: 'C0B1EP1JCLE'
+        channel-id: 'C0B13MRKM7H'
         slack-message: "\n Deploy pipeline finished \n"
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
