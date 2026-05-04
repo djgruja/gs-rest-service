@@ -37,7 +37,7 @@ jobs:
         payload: |
           channel_id: 'C0B1EP1JCLE'
           initial_comment: "Tests finished, sending report..."
-          file: "./log.txt"
+          file: "./complete/log.txt"
           filename: "log.txt"
 
     - name: Log in to Docker Hub
