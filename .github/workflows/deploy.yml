@@ -16,7 +16,7 @@ jobs:
       uses: slackapi/slack-github-action@v1.26.0
       with:
         channel-id: 'C0B13MRKM7H'
-        slack-message: "\n Deploy pipeline started \n <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|Click here> \n"
+        slack-message: "-----\n Deploy pipeline started \n <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|Click here> \n-----"
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
     
@@ -36,6 +36,6 @@ jobs:
       uses: slackapi/slack-github-action@v1.26.0
       with:
         channel-id: 'C0B13MRKM7H'
-        slack-message: "\n Deploy pipeline finished \n"
+        slack-message: "-----\n Deploy pipeline finished \n-----"
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
